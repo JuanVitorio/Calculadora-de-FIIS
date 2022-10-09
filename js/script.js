@@ -17,7 +17,14 @@ dy = parseFloat(ultimo_rendimento) / parseFloat(preco_cota)
 rendimento = total * dy
 comp_cotas = rendimento / preco_cota
 
-resu2.innerHTML = comp_cotas.toFixed(2)
-resu.innerHTML = rendimento.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
-
+if(preco_cota == '' || ultimo_rendimento == '' || quant_cotas == ''){
+  alert('Preencha todos os campos')
+}else{
+  if(rendimento == 0){
+  alert("Verifique se colocous o valores com vírgulas ',' ao invés de pontos '.'")
+}else{
+  resu2.innerHTML = comp_cotas.toFixed(2)
+  resu.innerHTML = rendimento.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+}
+}
 }
