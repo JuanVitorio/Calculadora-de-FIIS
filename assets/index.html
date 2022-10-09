@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Calculadora de FIIS</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../img/logo-fiis.png" type="image/x-icon">
+  <title>Calculadora FIIS</title>
 </head>
 <body>
   
@@ -15,51 +13,51 @@
   
   <header class="box-header">
     <h1 class="box-title">Calculadora FIIS</h1>
-    <h4 class="box-second-title">Juanzin</h2>
   </header>
+
+  <div class="center">
 
   <form class="input-form">
 
     <div class="blank">
-      <label for="nome-cota">Nome da cota:</label>
-      <input type="text" class="box-input" id="nome-cota" placeholder='"MXRF11"' >
+      <label for="preco_cota">Preço atual cota:</label>
+      <input type="text" class="box-input"
+      id="preco_cota" placeholder="R$0,00">
+    </div>
+
+    
+    <div class="blank">
+      <label for="ultimo_rendimento">Último rendimento:</label>
+      <input type="text" class="box-input" id="ultimo_rendimento" placeholder="R$0,00">
     </div>
 
     <div class="blank">
-      <label for="preco-cota">Preço atual cota:</label>
-      <input type="number" class="box-input"
-      id="preco-cota" placeholder="R$0,00">
+      <label for="quant_cotas">Quant. de cotas:</label>
+      <input type="text" class="box-input" id="quant_cotas" placeholder="1000...">
     </div>
 
-    <div class="blank">
-      <label for="ultimo-rendimento">Último rendimento:</label>
-      <input type="number" class="box-input" id="ultimo-rendimento" placeholder="R$0,00">
-    </div>
+    <a href="https://www.fundsexplorer.com.br" target="_blank">Clique aqui para ir a FundsExplorer</a>
 
-    <div class="blank">
-      <label for="quant-cotas">Quant. de cotas:</label>
-      <input type="number" class="box-input" id="quant-cotas" placeholder="1000...">
-    </div>
-
-    <button type="submit" class="form-button" onclick="calcular()"><i class="fa fa-calculator"></i> Calcular </button>
   </form>
+  <button onclick="calcular()"> <i class="fa fa-calculator"></i> Calcular</button>
+  </div>
 
   <div class="results hide">
 
     <div class="blank-result">
       <p class="blank-1">Quanto vai render: </p>
-      <span class="rendimento">2</span>
+      <span class="rendimento"></span>
     </div>
 
     <div class="blank-result">
-      <p class="blank-2">Quantas cotas compra: </p>
-      <span class="quan-cotas">2</span>
+      <p class="blank-2">Cotas a comprar: </p>
+      <span class="quan_cotas"></span>
     </div>
 
   </div>
 
+  <h4 class="box-second-title">&copy;Juan</h2>
 </div>
-
-</body>  
+</body>
 <script src="../js/script.js"></script>
 </html>

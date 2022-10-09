@@ -5,6 +5,16 @@
   color: #151515;
 }
 
+a {
+  text-decoration: none;
+  color: #255cae;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #c9e2ff;
@@ -28,11 +38,12 @@ button {
   padding: 1rem;
   width: 150px;
   font-size: 1.1rem;
-  margin: auto;
   cursor: pointer;
   border: 3px solid #102f5e;
   border-radius: 5px;
   transition: .4s;
+  display: block;
+  margin: auto;
 }
 
 button:hover {
@@ -51,16 +62,18 @@ button:hover>i {
   text-align: center;
 }
 
-.box-header h4 {
-  margin-left: 6rem;
-  text-align: left;
+h4 {
+  text-align: center;
   padding-bottom: 1rem;
+  font-weight: lighter;
+  color: #255cae;
+  margin-top: 1rem;
 }
 
 .box-header h1 {
   color: #255cae;
   font-size: 2.3rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
 }
 
 .input-box {
@@ -87,7 +100,7 @@ button:hover>i {
   gap: 1.5rem;
 }
 
-#nome-cota {
+#nome_cota {
   text-transform: uppercase;
 }
 
@@ -123,6 +136,4 @@ button:hover>i {
   font-weight: bold;
 }
 
-.hide {
-  display: none;
-}
+.hide {}

@@ -1,15 +1,23 @@
-const nome_cota = document.querySelector('#nome-cota')
-const preco_cota = Number(document.querySelector('#preco-cota'))
-const ult_rendimento = document.querySelector('#ultimo-rendimento')
-const quant_cotas = document.querySelector('#quant-cotas')
+"use strict"
 
 function calcular(){
 
-  var total = Number(quant_cotas * preco_cota).value
-  var b_y = Number(ult_rendimento * preco_cota).value
-  var rendimento = Number(total * b_y).value
-  var comp_cotas = Number(rendimento / preco_cota).value
+let preco_cota = document.getElementById('preco_cota').value
+let ultimo_rendimento = document.getElementById('ultimo_rendimento').value
+let quant_cotas = document.getElementById('quant_cotas').value
+let resu = document.querySelector('.rendimento')
+let resu2 = document.querySelector('.quan_cotas')
+let total = 0.0
+let rendimento = 0.0
+let comp_cotas = 0.0
+let dy = 0.0
 
+total = parseFloat(quant_cotas) * parseFloat(preco_cota)
+dy = parseFloat(ultimo_rendimento) / parseFloat(preco_cota)
+rendimento = total * dy
+comp_cotas = rendimento / preco_cota
 
-}  
-console.log(preco_cota)
+resu2.innerHTML = comp_cotas.toFixed(2)
+resu.innerHTML = rendimento.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+
+}
